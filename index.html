@@ -1,9 +1,39 @@
 <html>
   <head>
     <title>p5py</title>
+    <style>
+      div {
+      max-width:30em; margin:auto;
+      color:#222; font-family:monospace;
+      font-size:1.3em;      
+      }
+
+      pre {
+      background:#333; color:#eee;
+      font-weight: bold;
+      }
+
+      footer {
+      margin-top:4em; color:#555;
+      font-size: 0.8em;
+      }
+
+      footer hr {
+      border:none; border-top:1px dashed #555;
+      }
+
+      a {
+      text-decoration: none;
+      color: #22e;
+      }
+
+      a:hover {
+      color: #e22;
+      }
+    </style>
   </head>
   <body>
-    <div style="max-width:30em; margin:auto; color:#222; font-family:monospace; font-size:1.5em;">
+    <div style="">
       <h3>p5</h3>
 
       <p>
@@ -15,18 +45,44 @@
       </p>
 
       <p>
-        p5 is being developed
-        by <a href="https://github.com/abhikpal">Abhik Pal</a> as a
-        <a href="https://summerofcode.withgoogle.com/projects/#5809403503575040">
-          project</a> for
-        the <a href="https://summerofcode.withgoogle.com/"> Google
-        Summer of Code</a>. <a href="http://www.mkmoharana.com/">
-        Manindra Moharana</a> of
-        the <a href="https://processingfoundation.org/">Processing
-        Foundation</a> is mentoring the project.
+        To install the latest release use:<pre>
+
+    $ pip install p5
+        </pre>
+
+        We are planning on adding Python 2 support in the future; for
+        now, p5 works needs Python 3.
       </p>
 
-      <p>See <a href="https://github.com/p5py/p5">the project repo</a>
-        for details.</p>
+      <p>
+        All development work happens on
+        the <a href="https://github.com/p5py/p5/tree/develop">develop</a>
+        branch and <a href="https://github.com/p5py/p5">master</a> has
+        the (somewhat) stable releases uploaded
+        to <a href="https://pypi.python.org/pypi/p5">PyPI</a>. The
+        project documentation is hosted
+        on <a href="http://p5.readthedocs.io/en/latest/">ReadTheDocs</a>.
+      </p>
+
+      <p>
+        See <a href="https://github.com/p5py/p5">the project repo</a>
+        for more details.
+      </p>
+
+
+      <footer>
+        <hr>
+        <p>
+          p5 is being developed
+          by <a href="https://github.com/abhikpal">Abhik Pal</a> as a
+          <a href="https://summerofcode.withgoogle.com/projects/#5809403503575040">
+            project</a> for
+          the <a href="https://summerofcode.withgoogle.com/"> Google
+            Summer of Code</a>. <a href="http://www.mkmoharana.com/">
+            Manindra Moharana</a> of
+          the <a href="https://processingfoundation.org/">Processing
+            Foundation</a> is mentoring the project.
+        </p>
+      </footer>
     </div>
   </body>
