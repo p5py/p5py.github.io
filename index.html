@@ -3,7 +3,7 @@
     <title>p5py</title>
     <style>
       div {
-      max-width:30em; margin:auto;
+      max-width:40em; margin:auto;
       color:#222; font-family:monospace;
       font-size:1.3em;      
       }
@@ -18,7 +18,7 @@
       font-size: 0.8em;
       }
 
-      footer hr {
+      hr {
       border:none; border-top:1px dashed #555;
       }
 
@@ -30,6 +30,10 @@
       a:hover {
       color: #e22;
       }
+
+      img {
+      width: 100%;
+      }
     </style>
   </head>
   <body>
@@ -37,23 +41,87 @@
       <h3>p5</h3>
 
       <p>
-        p5 is a Python package based on the core ideas
-        of <a href="https://processing.org">Processing</a>. It aims to
-        make programming more accessible for beginners, artists, and
-        educators by combining Python's readability with Processing's
-        emphasis on learning to code in a visual context.
+
+        p5 is a Python library that provides high level functions to
+        work with graphics. p5 combines the core ideas
+        of <a href="https://processing.org">Processing</a> — learning to code
+        in a visual context — with Python's readability to make programming
+        more accessible to beginners and artists.
       </p>
 
       <p>
-        To install the latest release use:<pre>
+        p5 borrows Processing's metaphor of software "sketches". A typical
+        sketch looks like:
 
-    $ pip install p5
-        </pre>
+      <pre>
 
-        We are planning on adding Python 2 support in the future; for
-        now, p5 works needs Python 3.
+    from p5 import *
+
+    background_color = (0.1, 0.1, 0.1, 1.0)
+
+    def setup():
+        size(800, 600)
+        title("Example Sketch")
+        no_stroke()
+
+    def draw():
+        scale(2.0)
+        background(*background_color)
+
+        with push_matrix():
+            translate(160, 150)
+
+            fill(1.0, 0.6, 0.0, 1.0)
+            square((-30, -30), 60)
+            square((-30, -50), 20)
+
+            fill(*background_color)
+            square((-10, -10), 20)
+
+        with push_matrix():
+            translate(240, 170)
+
+            fill(1.0, 0.8, 0.0, 1.0)
+            rect((-30, -50), 60, 100)
+
+            fill(*background_color)
+            rect((-30, -30), 40, 20)
+            rect((-10, 10), 40, 20)
+
+    if __name__ == '__main__':
+        run()
+      </pre>
+
+        ...and, when run, produces:
       </p>
 
+      <p>
+        <img src="https://github.com/p5py/p5/raw/master/docs/_static/example_output.png" alt="Sample sketch output">
+      </p>
+
+
+      <p>
+        p5 requires Python 3. Once you have that installed, you can
+        then run
+
+        <pre>
+
+    pip install p5
+      </pre>
+        
+      from the command line. p5 includes a test script and you can run
+
+      <pre>
+
+   >>> import p5
+   >>> p5.sketch.test_run()
+      </pre>
+
+      from the interactive prompt to view the test render.
+      </p>
+
+      <hr>
+      
       <p>
         All development work happens on
         the <a href="https://github.com/p5py/p5/tree/develop">develop</a>
@@ -68,7 +136,6 @@
         See <a href="https://github.com/p5py/p5">the project repo</a>
         for more details.
       </p>
-
 
       <footer>
         <hr>
